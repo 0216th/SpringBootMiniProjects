@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko" > <!-- xmlns:th="http://www.thymeleaf.org" -->
+<head>
+    <meta charset="UTF-8">
+    <title>계산기</title>
+
+<link rel="stylesheet" href="static/css/calculator.css">  <!-- static을 꼭 넣어야하나??? -->
+
+</head>
+<body>
+
+<h1> 기본 계산기 v.1 </h1>
+<h3 id="notice"> 마우스 혹은 키보드를 사용하세요</h3>
+
+<table id = "table">
+    <tr>
+        <td colspan = "5"><input type="text" id = "calBox"></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><button class="keypad" onclick="click_button(event)">1</button></td>
+        <td><button class="keypad" onclick="click_button(event)">2</button></td>
+        <td><button class="keypad" onclick="click_button(event)">3</button></td>
+        <td><button class="keypad" onclick="click_button(event)">+</button></td>
+        <td><button class="keypad" onclick="click_button(event)">=</button></td>
+
+    </tr>
+
+    <tr>
+        <td><button class="keypad" onclick="click_button(event)">4</button></td>
+        <td><button class="keypad" onclick="click_button(event)">5</button></td>
+        <td><button class="keypad" onclick="click_button(event)">6</button></td>
+        <td><button class="keypad" onclick="click_button(event)">-</button></td>
+        <td><button class="keypad" onclick="click_button(event)">미정</button></td>
+
+    </tr>
+
+    <tr>
+        <td><button class="keypad" onclick="click_button(event)">7</button></td>
+        <td><button class="keypad" onclick="click_button(event)">8</button></td>
+        <td><button class="keypad" onclick="click_button(event)">9</button></td>
+        <td><button class="keypad" onclick="click_button(event)">X</button></td>
+        <td><button class="keypad" onclick="click_button(event)">미정</button></td>
+    </tr>
+
+    <tr>
+        <td><button class="keypad" onclick="click_button(event)">backspace</button></td>
+        <td><button class="keypad" onclick="click_button(event)">0</button></td>
+        <td><button class="keypad" onclick="click_button(event)">delete</button></td>
+        <td><button class="keypad" onclick="click_button(event)">/</button></td>
+        <td><button class="keypad" onclick="click_button(event)">미정</button></td>
+
+    </tr>
+
+</table>
+
+<h3 id = "history_id"> 계산 이력 (20개 까지만 보여집니다) </h3>
+
+<script src="static/js/calculator.js"></script>
+
+</body>
+
+
+</html>

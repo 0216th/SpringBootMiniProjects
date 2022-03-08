@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>로또</title>
+
+    <link rel="stylesheet" href="static/css/calculator.css">
+
+    <style>
+        table {
+            width : 100%;
+            border : 1px solid black;
+        }
+
+        th , td {
+            border : 1px solid black;
+            text-align : center;
+        }
+
+</style>
+
+</head>
+<body>
+
+<h1> 로또 v.1 </h1>
+
+<h3>최근 로또 번호를 가져옵니다. (10회차까지)</h3>
+
+<table>
+    <tr>
+        <th>회차</th>
+        <th>일자</th>
+        <th colspan="8">당첨번호</th>
+
+    </tr>
+
+    <tr th:each="lottoNums : ${lottoHistory}">
+        <td th:text="${lottoNums[0]}">회차</td>
+        <td th:text="${lottoNums[1]}">일자</td>
+        <td th:text="${lottoNums[2]}">1</td>
+        <td th:text="${lottoNums[3]}">2</td>
+        <td th:text="${lottoNums[4]}">3</td>
+        <td th:text="${lottoNums[5]}">4</td>
+        <td th:text="${lottoNums[6]}">5</td>
+        <td th:text="${lottoNums[7]}">6</td>
+        <td>BONUS</td>
+        <td th:text="${lottoNums[9]}">7</td>
+
+    </tr>
+
+    </tbody>
+</table>
+<p> 위 데이터는 로또 사이트를 크롤링한 결과입니다. </p>
+<script src="static/js/calculator.js"></script>
+
+<h4> 랜덤 로또 값 가져와보기</h4>
+<button>클릭!</button>
+
+</body>
+
+
+</html>
